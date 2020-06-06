@@ -58,6 +58,7 @@ aside .side-bar .library {
   font-size: 16px;
   font-weight: bold;
   padding: 15px 10px;
+  padding-right: 0;
 }
 
 aside .side-bar i {
@@ -75,21 +76,6 @@ aside .side-bar a:hover {
   color: #fff;
 }
 
-
-aside .side-bar i:last-of-type {
-  text-align: center;
-}
-
-aside .side-bar .profile {
-  background-color: black;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  min-height: 15%;
-  z-index: 200;
-}
-
 aside .side-bar img {
   width: 150px;
   height: 80px;
@@ -101,6 +87,75 @@ aside .side-bar img:last-of-type {
   width: 60px;
   height: 60px;
   padding: 5px;
+}
+
+aside .side-bar h3 {
+  font-weight: bold;
+  padding: 15px 10px;
+  color: #fff;
+}
+
+aside .side-bar .create-playlist {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  font-weight: bold;
+  padding: 10px 0 10px 10px;
+}
+
+aside .side-bar .create-playlist a {
+  text-decoration: none;
+  color: #b3b3b3;
+}
+
+aside .side-bar .create-playlist:hover a {
+  color: #fff;
+  cursor: pointer;
+}
+
+aside .side-bar .create-playlist a i {
+  font-size: 36px;
+  margin-right: 10px;
+}
+
+aside .side-bar .playlist .playlist-name{
+  overflow: visible;
+  font-weight: bold;
+  padding: 10px 0 10px 10px;
+}
+
+aside .side-bar .playlist .playlist-name li {
+  font-size: 14px;
+  padding: 5px 0;
+}
+
+aside .side-bar .playlist .playlist-name li:hover {
+  color: #fff;
+  cursor: pointer;
+}
+
+aside .side-bar .profile {
+  background-color: black;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  min-height: 10%;
+  z-index: 200;
+}
+
+aside .side-bar .profile .download {
+  padding: 15px 10px;
+  border-bottom: 1px solid #b3b3b3;
+  font-size: 12px;
+  width: 100%;
+}
+
+aside .side-bar .profile .user {
+  padding: 15px 10px;
+  font-size: 16px;
+  color: #fff;
+  width: 100%;
 }
 
 section .wall {
@@ -279,6 +334,7 @@ footer .player {
     font-size: 20px;
     font-weight: bold;
     padding: 15px 10px;
+    padding-right: 0;
   }
 
   aside .side-bar i {
@@ -305,6 +361,7 @@ footer .player {
     font-size: 16px;
     font-weight: bold;
     padding: 15px 8px;
+    padding-right: 0;
   }
 
   aside .side-bar i {
@@ -354,6 +411,7 @@ footer .player {
   aside .side-bar .search,
   aside .side-bar .library {
     font-size: 18px;
+    padding-right: 0;
   }
 }
 
@@ -402,6 +460,7 @@ footer .player {
     font-size: 16px;
     font-weight: bold;
     padding: 15px 5px;
+    padding-right: 0;
   }
 
   aside .side-bar {
@@ -439,10 +498,34 @@ footer .player {
     display: block;
   }
 
+  aside .side-bar i:last-of-type {
+    text-align: center;
+  }
+
   aside .side-bar {
     width: 10vw;
     align-items: center;
+  }
 
+  aside .side-bar .create-playlist,
+  aside .side-bar .playlist,
+  aside .side-bar .download span,
+  aside .side-bar .user span {
+    display: none;
+  }
+
+  aside .side-bar .profile {
+    text-align: center;
+  }
+
+  aside .side-bar .profile .user .fa-user-circle,
+  aside .side-bar .profile .download .fa-arrow-alt-circle-down {
+    font-size: 22px;
+    padding-right: 20px;
+  }
+
+  aside .side-bar h3 {
+    display: none;
   }
 
   section .wall {
