@@ -18,18 +18,19 @@ body {
   justify-content: flex-end;
   align-items: center;
   background-color: #090909;
+  z-index: 50;
 }
 
 #upgrade button {
   background-color: transparent;
-  border: 1px solid #fff;
+  border: 2px solid #fff;
   border-radius: 20px;
   padding: 12px 24px;
   margin-right: 20px;
   color: #fff;
   text-transform: uppercase;
+  font-weight: bold;
   font-size: 16px;
-  z-index: 50;
   transition: all 0.2s;
 }
 
@@ -42,7 +43,7 @@ aside .side-bar {
   background-color: blue;
   display: flex;
   float: left;
-  width: 20vw;
+  width: 15vw;
   height: calc(100vh - 100px);
   position: fixed;
   top: 0;
@@ -60,31 +61,138 @@ aside .side-bar .profile {
   z-index: 200;
 }
 
-section .wall-music {
+section .wall {
   background-color: #121212;
-  overflow: auto;
   height: 6000px;
-  width: 80vw;
+  width: 85vw;
   margin-top: 80px;
+  padding: 0 20px;
   float: right;
+  text-align: left;
 }
 
-section .wall-music .w-list {
+section .wall .w-section {
+  width: 100%;
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   color: #b3b3b3;
   text-transform: uppercase;
-}
-
-section .wall-music .w-list span {
-  padding: 20px;
-  margin: 5px;
   font-weight: bold;
 }
 
-section .wall-music .w-list span:hover {
+section .wall .w-section span {
+  padding: 25px;
+  font-size: 14px;
+}
+
+section .wall .w-section span:hover {
   color: #fff;
   cursor: pointer;
+}
+
+section .wall .w-section span .evidence {
+  width: 50%;
+  margin: 5px auto;
+  height: 4px;
+  border-radius: 2px;
+  line-height: 4px;
+  background-color: rgb(0, 255, 0);
+}
+
+section .wall h2 {
+  color: #fff;
+  padding: 50px 5px 30;
+  margin: 5px;
+}
+
+section .wall p {
+  color: #b3b3b3;
+  font-weight: bold;
+  padding: 5px;
+  margin: 5px;
+}
+
+section .wall .wall-music {
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: nowrap;
+  width: 100%;
+  padding: 30px 0;
+  margin-bottom: 50px;
+}
+
+section .wall .wall-music .single-song {
+  width: 180px;
+}
+
+section .wall .wall-music .single-song .cover {
+  position: relative;
+  margin: 5px 5px 10px;
+  padding: 5px;
+}
+
+section .wall .wall-music .single-song .cover img {
+  height: 100%;
+  width: 100%;
+}
+
+
+section .wall .wall-music .single-song .cover .transparent {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: auto;
+  width: auto;
+  background-color: transparent;
+  margin: 5px;
+  padding: 5px;
+  transition: all 0.2s ease-in-out;
+  opacity: 0;
+}
+
+section .wall .wall-music .single-song .cover .plus {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  font-size: 70px;
+  color: #fff;
+  opacity: 0;
+  transition: all 0.4s ease-in-out;
+}
+
+section .wall .wall-music .single-song .cover:hover .plus {
+  opacity: 1;
+  cursor: pointer;
+}
+
+section .wall .wall-music .single-song .cover:hover .transparent {
+  opacity: 1;
+  cursor: pointer;
+  background-color: rgba(0, 0, 0, 0.5);
+  margin-bottom: 9px;
+}
+
+section .wall .wall-music .single-song .song-title {
+  flex: none;
+  text-align: center;
+  color: #fff;
+  text-transform: capitalize;
+  font-weight: bold;
+  padding: 0 5px;
+}
+
+section .wall .wall-music .single-song .song-title h4 {
+  font-size: 14px;
+}
+
+section .wall .wall-music .single-song .song-title p {
+  color: #b3b3b3;
+  font-size: 12px;
+  padding: 10px 0;
 }
 
 footer .player {
@@ -95,4 +203,86 @@ footer .player {
   position: fixed;
   bottom: 0;
   z-index: 150;
+}
+
+@media all and (min-width: 1400px) {
+
+  section .wall h2 {
+    color: #fff;
+    font-size: 28px;
+  }
+
+  section .wall .wall-music .single-song {
+    width: 250px;
+  }
+
+  section .wall .wall-music .single-song .song-title h4 {
+    font-size: 16px;
+  }
+
+  section .wall .wall-music .single-song .song-title p {
+    font-size: 14px;
+  }
+
+  section .wall .w-section span {
+    font-size: 16px;
+  }
+}
+
+@media all and (max-width: 991px) {
+  section .wall .wall-music {
+    flex-wrap: wrap;
+  }
+
+  section .wall .wall-music .single-song {
+    width: 200px;
+  }
+}
+
+@media all and (max-width: 988px) {
+  section .wall .wall-music .single-song {
+    width: 250px;
+  }
+}
+
+@media all and (max-width: 929px) {
+  section .wall .wall-music .single-song {
+    width: 300px;
+  }
+}
+
+@media all and (max-width: 768px) {
+  section .wall .wall-music .single-song {
+    width: 280px;
+  }
+}
+
+@media all and (max-width: 706px) {
+  aside .side-bar {
+    width: 10vw;
+  }
+
+  section .wall {
+    width: 90vw;
+  }
+}
+
+@media all and (max-width: 666px) {
+  section .wall .wall-music .single-song {
+    width: 250px;
+  }
+}
+
+@media all and (max-width: 599px) {
+  section .wall .wall-music .single-song {
+    width: 400px;
+  }
+
+  section .wall .wall-music {
+    justify-content: center;
+  }
+
+  section .wall {
+    text-align: center;
+  }
 }
