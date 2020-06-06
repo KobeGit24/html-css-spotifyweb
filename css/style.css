@@ -154,6 +154,7 @@ aside .side-bar .profile .download {
 aside .side-bar .profile .user {
   padding: 15px 10px;
   font-size: 16px;
+  font-weight: bold;
   color: #fff;
   width: 100%;
 }
