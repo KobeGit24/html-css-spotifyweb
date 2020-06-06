@@ -6,7 +6,6 @@
 
 body {
   font-family: arial;
-  height: 6000px;
 }
 
 #upgrade {
@@ -40,8 +39,9 @@ body {
 }
 
 aside .side-bar {
-  background-color: blue;
+  background-color: #040404;
   display: flex;
+  flex-direction: column;
   float: left;
   width: 15vw;
   height: calc(100vh - 100px);
@@ -49,6 +49,35 @@ aside .side-bar {
   top: 0;
   left: 0;
   z-index: 100;
+  color: #b3b3b3;
+}
+
+aside .side-bar .home,
+aside .side-bar .search,
+aside .side-bar .library {
+  font-size: 16px;
+  font-weight: bold;
+  padding: 15px 10px;
+}
+
+aside .side-bar i {
+  width: 12%;
+}
+
+aside .side-bar a {
+  text-decoration: none;
+  color: #b3b3b3;
+  transition: all 0.2s;
+}
+
+aside .side-bar a:hover {
+  cursor: pointer;
+  color: #fff;
+}
+
+
+aside .side-bar i:last-of-type {
+  text-align: center;
 }
 
 aside .side-bar .profile {
@@ -61,12 +90,24 @@ aside .side-bar .profile {
   z-index: 200;
 }
 
+aside .side-bar img {
+  width: 150px;
+  height: 80px;
+  padding-left: 10px;
+}
+
+aside .side-bar img:last-of-type {
+  display: none;
+  width: 60px;
+  height: 60px;
+  padding: 5px;
+}
+
 section .wall {
   background-color: #121212;
-  height: 6000px;
   width: 85vw;
   margin-top: 80px;
-  padding: 0 20px;
+  padding: 0 20px 60px;
   float: right;
   text-align: left;
 }
@@ -110,7 +151,7 @@ section .wall p {
   color: #b3b3b3;
   font-weight: bold;
   padding: 5px;
-  margin: 5px;
+  margin: 5px 3px;
 }
 
 section .wall .wall-music {
@@ -137,6 +178,10 @@ section .wall .wall-music .single-song .cover img {
   width: 100%;
 }
 
+section .wall .wall-music .single-song .circle img,
+section .wall .wall-music .single-song .circle .transparent {
+  border-radius: 50%;
+}
 
 section .wall .wall-music .single-song .cover .transparent {
   position: absolute;
@@ -227,6 +272,18 @@ footer .player {
   section .wall .w-section span {
     font-size: 16px;
   }
+
+  aside .side-bar .home,
+  aside .side-bar .search,
+  aside .side-bar .library {
+    font-size: 20px;
+    font-weight: bold;
+    padding: 15px 10px;
+  }
+
+  aside .side-bar i {
+    width: 15%;
+  }
 }
 
 @media all and (max-width: 991px) {
@@ -237,11 +294,37 @@ footer .player {
   section .wall .wall-music .single-song {
     width: 200px;
   }
+
+  aside .side-bar img {
+    width: 140px;
+  }
+
+  aside .side-bar .home,
+  aside .side-bar .search,
+  aside .side-bar .library {
+    font-size: 16px;
+    font-weight: bold;
+    padding: 15px 8px;
+  }
+
+  aside .side-bar i {
+    width: 15%;
+  }
 }
 
 @media all and (max-width: 988px) {
   section .wall .wall-music .single-song {
     width: 250px;
+  }
+
+  aside .side-bar img {
+    width: 130px;
+  }
+}
+
+@media all and (max-width: 964px) {
+  aside .side-bar .library {
+    padding-right: 0;
   }
 }
 
@@ -249,17 +332,117 @@ footer .player {
   section .wall .wall-music .single-song {
     width: 300px;
   }
+
+  aside .side-bar img {
+    width: 115px;
+  }
+
+
+  aside .side-bar i {
+    width: 12%;
+  }
+
+  aside .side-bar {
+    width: 25vw;
+  }
+
+  section .wall {
+    width: 75vw;
+  }
+
+  aside .side-bar .home,
+  aside .side-bar .search,
+  aside .side-bar .library {
+    font-size: 18px;
+  }
 }
+
+@media all and (max-width: 858px) {
+  aside .side-bar i {
+    width: 15%;
+  }
+
+  aside .side-bar {
+    width: 20vw;
+  }
+
+  section .wall {
+    width: 80vw;
+  }
+
+}
+
+@media all and (max-width: 804px) {
+
+  aside .side-bar {
+    width: 22vw;
+  }
+
+  section .wall {
+    width: 78vw;
+  }
+  section .wall .wall-music .single-song {
+    width: 270px;
+  }
+}
+
 
 @media all and (max-width: 768px) {
   section .wall .wall-music .single-song {
     width: 280px;
   }
+
+  aside .side-bar img {
+    width: 110px;
+  }
+
+  aside .side-bar .home,
+  aside .side-bar .search,
+  aside .side-bar .library {
+    font-size: 16px;
+    font-weight: bold;
+    padding: 15px 5px;
+  }
+
+  aside .side-bar {
+    width: 20vw;
+  }
+
+  section .wall {
+    width: 80vw;
+  }
 }
 
-@media all and (max-width: 706px) {
+@media all and (max-width: 749px) {
+
+  aside .side-bar .home span,
+  aside .side-bar .search span,
+  aside .side-bar .library span {
+    display: none;
+  }
+
+  aside .side-bar .home a,
+  aside .side-bar .search a,
+  aside .side-bar .library a {
+    font-size: 20px;
+  }
+
+  aside .side-bar .home {
+    padding-top: 30px;
+  }
+
+  aside .side-bar img {
+    display: none;
+  }
+
+  aside .side-bar img:last-of-type {
+    display: block;
+  }
+
   aside .side-bar {
     width: 10vw;
+    align-items: center;
+
   }
 
   section .wall {
@@ -271,11 +454,16 @@ footer .player {
   section .wall .wall-music .single-song {
     width: 250px;
   }
+
+  aside .side-bar img:last-of-type {
+    width: 50px;
+    height: 50px;
+  }
 }
 
 @media all and (max-width: 599px) {
   section .wall .wall-music .single-song {
-    width: 400px;
+    width: 300px;
   }
 
   section .wall .wall-music {
