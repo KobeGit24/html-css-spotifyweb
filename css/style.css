@@ -128,6 +128,10 @@ aside .side-bar .playlist .playlist-name{
   padding: 10px 0 10px 10px;
 }
 
+aside .side-bar .create-playlist .playlist .playlist-name ul li {
+  list-style-type: none;
+}
+
 aside .side-bar .playlist .playlist-name li {
   font-size: 14px;
   padding: 5px 0;
@@ -308,6 +312,10 @@ section .wall .wall-music .single-song .song-title p {
   padding: 10px 0;
 }
 
+
+/* INIZIO FOOTER */
+
+
 footer .player {
   background-color: #242424;
   width: 100%;
@@ -324,7 +332,7 @@ footer .player .play-song {
   height: 100%;
   width: 100%;
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
 }
 
@@ -353,6 +361,9 @@ footer .player .play-song .play-song-name .play-song-title p {
   padding-top: 2px;
 }
 
+footer .player .play-song .play-song-icon {
+  padding-left: 30px;
+}
 
 footer .player .play-song .play-song-icon i {
   color: #b3b3b3;
@@ -364,30 +375,27 @@ footer .player .play-song .play-song-icon i:hover {
   cursor: pointer;
 }
 
-
-
-
-
-
-
 footer .player .play-element {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   height: 100%;
   width: 100%;
-  border: 2px solid #fff;
+  padding: 10px 0;
 }
 
 footer .player .play-element .play-element-icon {
-  height: 50%;
-  line-height: 50px;
+  width: 100%;
   text-align: center;
-  padding: 10px 0;
+  height: 50%;
+  padding-bottom: 10px;
 }
 
 footer .player .play-element .play-element-icon a {
   text-decoration: none;
   color: #b3b3b3;
-  padding: 12px;
-  margin: 0 8px;
+  padding: 0 8px;
   font-size: 15px;
 }
 
@@ -400,13 +408,13 @@ footer .player .play-element .play-element-icon a .fa-play-circle {
 }
 
 footer .player .play-element .play-element-timing {
-  height: 50px;
-  line-height: 50px;
+  width: 100%;
   text-align: center;
   color:  #b3b3b3;
+  position: relative;
 }
 
-footer .player .play-element .play-element-time {
+footer .player .play-element-time {
   display: inline-block;
   width: 30%;
   height: 4px;
@@ -416,7 +424,7 @@ footer .player .play-element .play-element-time {
   margin: 0 10px 4px 10px;
 }
 
-footer .player .play-element .play-element-time .play-element-time-now {
+footer .player .play-element-time .play-element-time-now {
   position: relative;
   width: 30%;
   height: 4px;
@@ -425,54 +433,99 @@ footer .player .play-element .play-element-time .play-element-time-now {
   background-color: #b3b3b3;
 }
 
-footer .player .play-element .play-element-time .play-element-time-now:hover {
-  cursor: pointer;
+footer .player .play-element .play-element-timing:hover .play-element-time .play-element-time-now {
   background-color: rgb(0, 255, 0);
+  cursor: pointer;
 }
 
-footer .player .play-element .play-element-time .play-element-time-now::after {
+footer .player .play-element .play-element-timing .play-element-time-icon {
+  position: absolute;
+  top: 0;
+  left: 43%;
+  display: none;
 }
 
-
-
-
-
-
-
-
-
-
-
-
+footer .player .play-element .play-element-timing:hover .play-element-time-icon {
+  display: block;
+  cursor: pointer;
+}
 
 footer .player .play-volume {
   height: 100%;
   width: 100%;
-  border: 2px solid #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 
+.player .fa-list,
+.player .fa-desktop,
+.player .fa-volume-up {
+  padding: 0 15px;
+}
 
+footer .player .play-volume .play-element-timing {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  color: #b3b3b3;
+  position: relative;
+}
 
+footer .player .play-volume .play-element-timing .play-element-time {
+  display: inline-block;
+  width: 30%;
+  height: 4px;
+  border-radius: 2px;
+  line-height: 4px;
+  background-color: rgba(179, 179, 179, 0.2);
+  margin: 0 10px 4px 10px;
+}
 
+footer .player .play-volume .play-element-timing .play-element-time .play-element-time-now {
+  position: relative;
+  width: 35%;
+  height: 4px;
+  border-radius: 2px;
+  line-height: 4px;
+  background-color: #b3b3b3;
+}
 
+footer .player .play-volume .play-element-timing:hover .play-element-time .play-element-time-now {
+  background-color: rgb(0, 255, 0);
+  cursor: pointer;
+}
 
+footer .player .play-volume .play-element-timing .play-element-time-icon {
+  position: absolute;
+  bottom: 1%;
+  left: 74px;
+  display: none;
+}
 
+footer .player .play-volume .play-element-timing:hover .play-element-time-icon {
+  display: block;
+  cursor: pointer;
+}
 
+footer .player .play-volume .play-volume-icon {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
 
+footer .player .play-volume .play-volume-icon a {
+  text-decoration: none;
+  color: #b3b3b3;
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
+footer .player .play-volume .play-volume-icon a:hover {
+  color: #fff;
+  cursor: pointer;
+}
 
 /* INIZIO MEDIA-QUERY */
 
@@ -481,6 +534,8 @@ footer .player .play-volume {
     overflow-y: scroll;
   }
 }
+
+/* DEBUG PER IL MIO SCHERMO */
 
 @media all and (min-width: 1400px) {
 
@@ -519,6 +574,10 @@ footer .player .play-volume {
   }
 }
 
+
+
+/* BREAKPOINT MD */
+
 @media all and (max-width: 992px) {
 
   aside .side-bar .home,
@@ -555,27 +614,38 @@ footer .player .play-volume {
    width: 270px;
 }
 
-
+/* BREAKPOINT S */
 @media all and (max-width: 768px) {
    section .wall .wall-music .single-song {
-    width: 260px;
+    width: 270px;
   }
 }
 
-@media all and (max-width: 745px) {
-  section .wall {
-    flex-wrap: nowrap;
+@media all and (max-width: 764px) {
+  section .wall .wall-music .single-song {
+   width: 250px;
+}
+
+@media all and (max-width: 724px) {
+  section .wall .wall-music .single-song {
+   width: 235px;
+}
+
+@media all and (max-width: 694px) {
+  section .wall .wall-music .single-song {
+   width: 230px;
   }
 }
 
-@media all and (max-width: 578px) {
+/* BREAKPOINT XS */
+
+@media all and (max-width: 684px) {
+  section .wall .wall-music .single-song {
+   width: 260px;
+  }
 
   section .wall {
     flex-wrap: wrap;
-  }
-
-  section .wall .wall-music .single-song {
-    width: 230px;
   }
 
   aside .side-bar {
@@ -646,5 +716,18 @@ footer .player .play-volume {
 
   footer .player .play-song .play-song-icon i {
     padding: 6px;
+  }
+}
+
+
+@media all and (max-width: 619px) {
+  section .wall .wall-music .single-song {
+   width: 240px;
+  }
+}
+
+@media all and (max-width: 579px) {
+  section .wall .wall-music .single-song {
+   width: 400px;
   }
 }
