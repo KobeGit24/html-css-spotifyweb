@@ -43,7 +43,7 @@ aside .side-bar {
   display: flex;
   flex-direction: column;
   float: left;
-  width: 15vw;
+  min-width: 185px;
   height: calc(100vh - 100px);
   position: fixed;
   top: 0;
@@ -59,6 +59,10 @@ aside .side-bar .library {
   font-weight: bold;
   padding: 15px 10px;
   padding-right: 0;
+}
+
+aside .side-bar .home {
+  border-left: 4px solid rgb(0, 255, 0);
 }
 
 aside .side-bar i {
@@ -84,9 +88,9 @@ aside .side-bar img {
 
 aside .side-bar img:last-of-type {
   display: none;
-  width: 60px;
-  height: 60px;
-  padding: 5px;
+  width: 55px;
+  height: 55px;
+  padding: 6px;
 }
 
 aside .side-bar h3 {
@@ -119,7 +123,7 @@ aside .side-bar .create-playlist a i {
 }
 
 aside .side-bar .playlist .playlist-name{
-  overflow: visible;
+  height: 190px;
   font-weight: bold;
   padding: 10px 0 10px 10px;
 }
@@ -146,9 +150,18 @@ aside .side-bar .profile {
 
 aside .side-bar .profile .download {
   padding: 15px 10px;
-  border-bottom: 1px solid #b3b3b3;
   font-size: 12px;
   width: 100%;
+}
+
+
+aside .side-bar .profile .division {
+  width: 80%;
+  margin: 3px 0 3px 6px;
+  height: 1px;
+  border-radius: 1px;
+  line-height: 1px;
+  background-color: #b3b3b3;
 }
 
 aside .side-bar .profile .user {
@@ -161,7 +174,7 @@ aside .side-bar .profile .user {
 
 section .wall {
   background-color: #121212;
-  width: 85vw;
+  width: calc(100% - 185px);
   margin-top: 80px;
   padding: 0 20px 60px;
   float: right;
@@ -213,7 +226,6 @@ section .wall p {
 section .wall .wall-music {
   display: flex;
   justify-content: flex-start;
-  flex-wrap: nowrap;
   width: 100%;
   padding: 30px 0;
   margin-bottom: 50px;
@@ -297,13 +309,177 @@ section .wall .wall-music .single-song .song-title p {
 }
 
 footer .player {
-  background-color: yellow;
-  display: flex;
+  background-color: #242424;
   width: 100%;
   height: 100px;
   position: fixed;
   bottom: 0;
   z-index: 150;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+footer .player .play-song {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+footer .player .play-song .play-song-name {
+  display: flex;
+  align-items: center;
+}
+
+footer .player .play-song .play-song-name img {
+  height: 50px;
+  width: 50px;
+  margin: 0 15px;
+}
+
+footer .player .play-song .play-song-name .play-song-title h5 {
+  font-size: 15px;
+  color: #fff;
+  font-weight: bold;
+  padding-bottom: 2px;
+}
+
+footer .player .play-song .play-song-name .play-song-title p {
+  font-size: 12px;
+  color:  #b3b3b3;
+  font-weight: bold;
+  padding-top: 2px;
+}
+
+
+footer .player .play-song .play-song-icon i {
+  color: #b3b3b3;
+  padding: 10px;
+}
+
+footer .player .play-song .play-song-icon i:hover {
+  color: #fff;
+  cursor: pointer;
+}
+
+
+
+
+
+
+
+footer .player .play-element {
+  height: 100%;
+  width: 100%;
+  border: 2px solid #fff;
+}
+
+footer .player .play-element .play-element-icon {
+  height: 50%;
+  line-height: 50px;
+  text-align: center;
+  padding: 10px 0;
+}
+
+footer .player .play-element .play-element-icon a {
+  text-decoration: none;
+  color: #b3b3b3;
+  padding: 12px;
+  margin: 0 8px;
+  font-size: 15px;
+}
+
+footer .player .play-element .play-element-icon a:hover {
+  color: #fff;
+}
+
+footer .player .play-element .play-element-icon a .fa-play-circle {
+  font-size: 23px;
+}
+
+footer .player .play-element .play-element-timing {
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  color:  #b3b3b3;
+}
+
+footer .player .play-element .play-element-time {
+  display: inline-block;
+  width: 30%;
+  height: 4px;
+  border-radius: 2px;
+  line-height: 4px;
+  background-color: rgba(179, 179, 179, 0.2);
+  margin: 0 10px 4px 10px;
+}
+
+footer .player .play-element .play-element-time .play-element-time-now {
+  position: relative;
+  width: 30%;
+  height: 4px;
+  border-radius: 2px;
+  line-height: 4px;
+  background-color: #b3b3b3;
+}
+
+footer .player .play-element .play-element-time .play-element-time-now:hover {
+  cursor: pointer;
+  background-color: rgb(0, 255, 0);
+}
+
+footer .player .play-element .play-element-time .play-element-time-now::after {
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+footer .player .play-volume {
+  height: 100%;
+  width: 100%;
+  border: 2px solid #fff;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* INIZIO MEDIA-QUERY */
+
+@media all and (max-height: 730px) {
+  aside .side-bar .playlist .playlist-name {
+    overflow-y: scroll;
+  }
 }
 
 @media all and (min-width: 1400px) {
@@ -343,18 +519,7 @@ footer .player {
   }
 }
 
-@media all and (max-width: 991px) {
-  section .wall .wall-music {
-    flex-wrap: wrap;
-  }
-
-  section .wall .wall-music .single-song {
-    width: 200px;
-  }
-
-  aside .side-bar img {
-    width: 140px;
-  }
+@media all and (max-width: 992px) {
 
   aside .side-bar .home,
   aside .side-bar .search,
@@ -365,120 +530,71 @@ footer .player {
     padding-right: 0;
   }
 
-  aside .side-bar i {
-    width: 15%;
+  section .wall .wall-music {
+    flex-wrap: wrap;
   }
 }
 
-@media all and (max-width: 988px) {
+@media all and (max-width: 944px) {
   section .wall .wall-music .single-song {
-    width: 250px;
-  }
-
-  aside .side-bar img {
-    width: 130px;
-  }
+   width: 320px;
 }
 
-@media all and (max-width: 964px) {
-  aside .side-bar .library {
-    padding-right: 0;
-  }
-}
-
-@media all and (max-width: 929px) {
+@media all and (max-width: 864px) {
   section .wall .wall-music .single-song {
-    width: 300px;
-  }
-
-  aside .side-bar img {
-    width: 115px;
-  }
-
-
-  aside .side-bar i {
-    width: 12%;
-  }
-
-  aside .side-bar {
-    width: 25vw;
-  }
-
-  section .wall {
-    width: 75vw;
-  }
-
-  aside .side-bar .home,
-  aside .side-bar .search,
-  aside .side-bar .library {
-    font-size: 18px;
-    padding-right: 0;
-  }
+   width: 300px;
 }
 
-@media all and (max-width: 858px) {
-  aside .side-bar i {
-    width: 15%;
-  }
-
-  aside .side-bar {
-    width: 20vw;
-  }
-
-  section .wall {
-    width: 80vw;
-  }
-
-}
-
-@media all and (max-width: 804px) {
-
-  aside .side-bar {
-    width: 22vw;
-  }
-
-  section .wall {
-    width: 78vw;
-  }
+@media all and (max-width: 824px) {
   section .wall .wall-music .single-song {
-    width: 270px;
-  }
+   width: 280px;
+}
+
+@media all and (max-width: 784px) {
+  section .wall .wall-music .single-song {
+   width: 270px;
 }
 
 
 @media all and (max-width: 768px) {
-  section .wall .wall-music .single-song {
-    width: 280px;
-  }
-
-  aside .side-bar img {
-    width: 110px;
-  }
-
-  aside .side-bar .home,
-  aside .side-bar .search,
-  aside .side-bar .library {
-    font-size: 16px;
-    font-weight: bold;
-    padding: 15px 5px;
-    padding-right: 0;
-  }
-
-  aside .side-bar {
-    width: 20vw;
-  }
-
-  section .wall {
-    width: 80vw;
+   section .wall .wall-music .single-song {
+    width: 260px;
   }
 }
 
-@media all and (max-width: 749px) {
+@media all and (max-width: 745px) {
+  section .wall {
+    flex-wrap: nowrap;
+  }
+}
+
+@media all and (max-width: 578px) {
+
+  section .wall {
+    flex-wrap: wrap;
+  }
+
+  section .wall .wall-music .single-song {
+    width: 230px;
+  }
+
+  aside .side-bar {
+    height: calc(100vh - 100px);
+    min-width: 60px;
+  }
+
+  section .wall {
+    min-width: calc(100% - 60px);
+  }
 
   aside .side-bar .home span,
   aside .side-bar .search span,
   aside .side-bar .library span {
     display: none;
+  }
+
+  aside .side-bar .home {
+    border-left: none;
   }
 
   aside .side-bar .home a,
@@ -504,7 +620,6 @@ footer .player {
   }
 
   aside .side-bar {
-    width: 10vw;
     align-items: center;
   }
 
@@ -529,32 +644,7 @@ footer .player {
     display: none;
   }
 
-  section .wall {
-    width: 90vw;
-  }
-}
-
-@media all and (max-width: 666px) {
-  section .wall .wall-music .single-song {
-    width: 250px;
-  }
-
-  aside .side-bar img:last-of-type {
-    width: 50px;
-    height: 50px;
-  }
-}
-
-@media all and (max-width: 599px) {
-  section .wall .wall-music .single-song {
-    width: 300px;
-  }
-
-  section .wall .wall-music {
-    justify-content: center;
-  }
-
-  section .wall {
-    text-align: center;
+  footer .player .play-song .play-song-icon i {
+    padding: 6px;
   }
 }
