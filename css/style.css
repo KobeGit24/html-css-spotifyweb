@@ -1,3 +1,7 @@
+
+
+/* BONUS */
+
 * {
   margin: 0;
   padding: 0;
@@ -54,6 +58,23 @@ aside .side-bar {
   color: #b3b3b3;
 }
 
+aside .side-bar img {
+  width: 150px;
+  height: 80px;
+  padding-left: 10px;
+}
+
+aside .side-bar img:last-of-type {
+  display: none;
+  width: 55px;
+  height: 55px;
+  padding: 6px;
+}
+
+aside .side-bar ul li {
+  list-style-type: none;
+}
+
 aside .side-bar .home,
 aside .side-bar .search,
 aside .side-bar .library {
@@ -67,32 +88,19 @@ aside .side-bar .home {
   border-left: 4px solid rgb(0, 255, 0);
 }
 
-aside .side-bar i {
+aside .side-bar ul li i {
   width: 12%;
 }
 
-aside .side-bar a {
+aside .side-bar ul li a {
   text-decoration: none;
   color: #b3b3b3;
   transition: all 0.2s;
 }
 
-aside .side-bar a:hover {
+aside .side-bar ul li a:hover {
   cursor: pointer;
   color: #fff;
-}
-
-aside .side-bar img {
-  width: 150px;
-  height: 80px;
-  padding-left: 10px;
-}
-
-aside .side-bar img:last-of-type {
-  display: none;
-  width: 55px;
-  height: 55px;
-  padding: 6px;
 }
 
 aside .side-bar h3 {
@@ -154,6 +162,15 @@ aside .side-bar .profile {
   z-index: 200;
 }
 
+aside .side-bar .profile a {
+  text-decoration: none;
+  color: #b3b3b3;
+}
+
+aside .side-bar .profile a:hover {
+  color: #fff;
+}
+
 aside .side-bar .profile .download {
   padding: 15px 10px;
   font-size: 12px;
@@ -180,16 +197,16 @@ aside .side-bar .profile .user {
 
 /* INIZIO SECTION CORPO CENTRALE  */
 
-section .wall {
+main .wall {
   background-color: #121212;
   width: calc(100% - 185px);
-  margin-top: 80px;
+  margin: 80px 0;
   padding: 0 5px 60px;
   float: right;
   text-align: left;
 }
 
-section .wall .w-section {
+main .wall section .w-section {
   width: 100%;
   display: flex;
   flex-wrap: wrap;
@@ -197,7 +214,7 @@ section .wall .w-section {
   padding: 30px 0;
 }
 
-section .wall .w-section a {
+main .wall section .w-section a {
   text-decoration: none;
   color: #b3b3b3;
   text-transform: uppercase;
@@ -207,12 +224,12 @@ section .wall .w-section a {
   font-size: 15px;
 }
 
-section .wall .w-section a:hover {
+main .wall section .w-section a:hover {
   color: #fff;
   cursor: pointer;
 }
 
-section .wall .w-section a .evidence {
+main .wall section .w-section a .evidence {
   width: 50%;
   margin: 5px auto;
   height: 4px;
@@ -221,48 +238,53 @@ section .wall .w-section a .evidence {
   background-color: rgb(0, 255, 0);
 }
 
-section .wall h2 {
+main .wall section .list-music {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+}
+
+main .wall section .list-music .list-music-title h2 {
   color: #fff;
   padding: 50px 5px 20px;;
   margin: 5px;
 }
 
-section .wall p {
+main .wall section p {
   color: #b3b3b3;
   font-weight: bold;
   padding: 5px;
   margin: 5px 3px;
 }
 
-section .wall .wall-music {
+main .wall section .wall-music {
   display: flex;
   justify-content: flex-start;
   width: 100%;
-  padding: 30px 0;
-  margin-bottom: 50px;
 }
 
-section .wall .wall-music .single-song {
+main .wall section .wall-music .single-song {
   width: 180px;
 }
 
-section .wall .wall-music .single-song .cover {
+main .wall section .wall-music .single-song .cover {
   position: relative;
   margin: 5px 5px 10px;
   padding: 5px;
 }
 
-section .wall .wall-music .single-song .cover img {
+main .wall section .wall-music .single-song .cover img {
   height: 100%;
   width: 100%;
 }
 
-section .wall .wall-music .single-song .circle img,
-section .wall .wall-music .single-song .circle .transparent {
+main .wall section .wall-music .single-song .circle img,
+main .wall section .wall-music .single-song .circle .transparent {
   border-radius: 50%;
 }
 
-section .wall .wall-music .single-song .cover .transparent {
+main .wall section .wall-music .single-song .cover .transparent {
   position: absolute;
   top: 0;
   left: 0;
@@ -277,7 +299,7 @@ section .wall .wall-music .single-song .cover .transparent {
   opacity: 0;
 }
 
-section .wall .wall-music .single-song .cover .plus {
+main .wall section .wall-music .single-song .cover .plus {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -288,19 +310,19 @@ section .wall .wall-music .single-song .cover .plus {
   transition: all 0.4s ease-in-out;
 }
 
-section .wall .wall-music .single-song .cover:hover .plus {
+main .wall section .wall-music .single-song .cover:hover .plus {
   opacity: 1;
   cursor: pointer;
 }
 
-section .wall .wall-music .single-song .cover:hover .transparent {
+main .wall section .wall-music .single-song .cover:hover .transparent {
   opacity: 1;
   cursor: pointer;
   background-color: rgba(0, 0, 0, 0.5);
   margin-bottom: 9px;
 }
 
-section .wall .wall-music .single-song .song-title {
+main .wall section .wall-music .single-song .song-title {
   flex: none;
   text-align: center;
   color: #fff;
@@ -309,11 +331,11 @@ section .wall .wall-music .single-song .song-title {
   padding: 0 5px;
 }
 
-section .wall .wall-music .single-song .song-title h4 {
+main .wall section .wall-music .single-song .song-title h4 {
   font-size: 14px;
 }
 
-section .wall .wall-music .single-song .song-title p {
+main .wall section .wall-music .single-song .song-title p {
   color: #b3b3b3;
   font-size: 12px;
   padding: 10px 0;
@@ -596,50 +618,50 @@ footer .player .play-volume .play-volume-icon a:hover {
     padding-right: 0;
   }
 
-  section .wall .wall-music {
+  main .wall section .list-music .wall-music {
     flex-wrap: wrap;
   }
 }
 
 @media all and (max-width: 944px) {
-  section .wall .wall-music .single-song {
+  main .wall section .list-music .wall-music .single-song {
    width: 320px;
 }
 
 @media all and (max-width: 864px) {
-  section .wall .wall-music .single-song {
+  main .wall section .list-music .wall-music .single-song {
    width: 300px;
 }
 
 @media all and (max-width: 824px) {
-  section .wall .wall-music .single-song {
+  main .wall section .list-music .wall-music .single-song {
    width: 280px;
 }
 
 @media all and (max-width: 784px) {
-  section .wall .wall-music .single-song {
+  main .wall section .list-music .wall-music .single-song {
    width: 270px;
 }
 
 /* BREAKPOINT S */
 @media all and (max-width: 768px) {
-   section .wall .wall-music .single-song {
+   main .wall section .list-music .wall-music .single-song {
     width: 270px;
   }
 }
 
 @media all and (max-width: 764px) {
-  section .wall .wall-music .single-song {
+  main .wall section .list-music .wall-music .single-song {
    width: 250px;
 }
 
 @media all and (max-width: 724px) {
-  section .wall .wall-music .single-song {
+  main .wall section .list-music .wall-music .single-song {
    width: 235px;
 }
 
 @media all and (max-width: 694px) {
-  section .wall .wall-music .single-song {
+  main .wall section .list-music .wall-music .single-song {
    width: 230px;
   }
 }
@@ -647,12 +669,8 @@ footer .player .play-volume .play-volume-icon a:hover {
 /* BREAKPOINT XS */
 
 @media all and (max-width: 684px) {
-  section .wall .wall-music .single-song {
+  main .wall section .list-music .wall-music .single-song {
    width: 260px;
-  }
-
-  section .wall {
-    flex-wrap: wrap;
   }
 
   aside .side-bar {
@@ -660,7 +678,7 @@ footer .player .play-volume .play-volume-icon a:hover {
     min-width: 60px;
   }
 
-  section .wall {
+  main .wall {
     min-width: calc(100% - 60px);
   }
 
@@ -728,13 +746,13 @@ footer .player .play-volume .play-volume-icon a:hover {
 
 
 @media all and (max-width: 619px) {
-  section .wall .wall-music .single-song {
+  main .wall section .list-music .wall-music .single-song {
    width: 240px;
   }
 }
 
 @media all and (max-width: 579px) {
-  section .wall .wall-music .single-song {
+  main .wall section .list-music .wall-music .single-song {
    width: 400px;
   }
 }
