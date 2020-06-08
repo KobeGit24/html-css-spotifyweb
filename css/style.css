@@ -38,6 +38,8 @@ body {
   cursor: pointer;
 }
 
+/* INIZIO SIDEBAR LATERALE */
+
 aside .side-bar {
   background-color: #040404;
   display: flex;
@@ -176,6 +178,8 @@ aside .side-bar .profile .user {
   width: 100%;
 }
 
+/* INIZIO SECTION CORPO CENTRALE  */
+
 section .wall {
   background-color: #121212;
   width: calc(100% - 185px);
@@ -190,6 +194,7 @@ section .wall .w-section {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  padding: 30px 0;
 }
 
 section .wall .w-section a {
@@ -197,7 +202,8 @@ section .wall .w-section a {
   color: #b3b3b3;
   text-transform: uppercase;
   font-weight: bold;
-  padding: 25px;
+  padding: 0 15px;
+  margin: 0 10px;
   font-size: 15px;
 }
 
@@ -217,7 +223,7 @@ section .wall .w-section a .evidence {
 
 section .wall h2 {
   color: #fff;
-  padding: 50px 5px 30;
+  padding: 50px 5px 20px;;
   margin: 5px;
 }
 
