@@ -180,7 +180,7 @@ section .wall {
   background-color: #121212;
   width: calc(100% - 185px);
   margin-top: 80px;
-  padding: 0 20px 60px;
+  padding: 0 5px 60px;
   float: right;
   text-align: left;
 }
@@ -190,22 +190,23 @@ section .wall .w-section {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+}
+
+section .wall .w-section a {
+  text-decoration: none;
   color: #b3b3b3;
   text-transform: uppercase;
   font-weight: bold;
-}
-
-section .wall .w-section span {
   padding: 25px;
-  font-size: 14px;
+  font-size: 15px;
 }
 
-section .wall .w-section span:hover {
+section .wall .w-section a:hover {
   color: #fff;
   cursor: pointer;
 }
 
-section .wall .w-section span .evidence {
+section .wall .w-section a .evidence {
   width: 50%;
   margin: 5px auto;
   height: 4px;
