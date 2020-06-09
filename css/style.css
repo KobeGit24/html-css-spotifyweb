@@ -407,14 +407,13 @@ footer .player .play-element {
   justify-content: center;
   height: 100%;
   width: 100%;
-  padding: 10px 0;
 }
 
 footer .player .play-element .play-element-icon {
-  width: 100%;
-  text-align: center;
-  height: 50%;
-  padding-bottom: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
 }
 
 footer .player .play-element .play-element-icon a {
@@ -433,14 +432,16 @@ footer .player .play-element .play-element-icon a .fa-play-circle {
 }
 
 footer .player .play-element .play-element-timing {
-  width: 100%;
-  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   color:  #b3b3b3;
   position: relative;
+  width: 100%;
 }
 
 footer .player .play-element-time {
-  display: inline-block;
+  display: block;
   width: 30%;
   height: 4px;
   border-radius: 2px;
@@ -487,7 +488,7 @@ footer .player .play-volume {
 .player .fa-list,
 .player .fa-desktop,
 .player .fa-volume-up {
-  padding: 0 15px;
+  padding: 15px;
 }
 
 footer .player .play-volume .play-element-timing {
